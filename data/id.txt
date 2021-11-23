@@ -1,0 +1,874 @@
+2926 'Pretzel Recipes With A Twist'
+7901 'The Ultimate S’mores Cake'
+7927 'Delicious Gochujang Fried Fall Squash'
+7923 'Cauliflower Purée'
+7922 'Savory Pepita Pan De Elote (Mexican Cornbread) With Charred Poblano Butter'
+7924 'Thanksgiving Focaccia'
+7936 'Apple Caramel Pie'
+2947 'Healthy Recipes For A Healthy Monday'
+2949 '6 Warm Soup Recipes For Those Cozy Days'
+2931 'Recipes You Should Learn If You Love Noodles'
+2941 'Slow Cooker Recipes Every Cook Should Know About'
+2932 'Best Calzones Ever!'
+2928 'Ramen Recipes For Each Day Of The Week'
+2921 'Fresh Homemade Fish Recipes'
+7935 'Holiday Cornbread Stuffing By Rie'
+7928 'My Brother’s Butternut Squash'
+7931 'Creamiest Fall Ziti'
+7929 'Tandoori Turkey'
+7918 'Thanksgiving Turkey French Dip'
+7917 'Crackling Crust Roast Pork With Mojo'
+7916 'Pumpkin Spice Poke Cake'
+2911 'Rice Recipes For Each Day Of The Week'
+2922 ' Dips For All Your Chips'
+2929 'Guac Lovers Only!'
+2917 'Recipes That Will Actually Leave Your Mouth Watering'
+2914 'Quick And Easy Snacks For Night Owls'
+2910 'Easy Homemade Chicken Recipes'
+2901 'Cheese-Stuffed Foods That Will Change Your Life'
+2900 'The Best Vegan Desserts You Can Make!'
+7885 'Blackened Curried Goat With Potatoes'
+7921 'Pumpkin Pie Bars'
+7920 'Hash Brown Mini Quiches'
+7919 'Winter Vegetable Gratin'
+7914 'Honey Baked Ham By Alvin'
+7915 'Gingerbread Cheesecake Cookie Cups By Jasmine'
+7913 '40-Clove Garlic Bread'
+2937 'Everything You Can Make With Cornbread Chili'
+2940 'Hearty And Healthy Black Bean Meals'
+2927 'Everything You Can Make With Bananas'
+2924 'This Is How You Should Be Eating Your Baked Potato'
+7901 'The Ultimate S’mores Cake'
+7927 'Delicious Gochujang Fried Fall Squash'
+7923 'Cauliflower Purée'
+7922 'Savory Pepita Pan De Elote (Mexican Cornbread) With Charred Poblano Butter'
+7924 'Thanksgiving Focaccia'
+7936 'Apple Caramel Pie'
+2947 'Healthy Recipes For A Healthy Monday'
+2949 '6 Warm Soup Recipes For Those Cozy Days'
+2931 'Recipes You Should Learn If You Love Noodles'
+2941 'Slow Cooker Recipes Every Cook Should Know About'
+2932 'Best Calzones Ever!'
+2928 'Ramen Recipes For Each Day Of The Week'
+2921 'Fresh Homemade Fish Recipes'
+7935 'Holiday Cornbread Stuffing By Rie'
+7928 'My Brother’s Butternut Squash'
+7931 'Creamiest Fall Ziti'
+7929 'Tandoori Turkey'
+7918 'Thanksgiving Turkey French Dip'
+7917 'Crackling Crust Roast Pork With Mojo'
+7916 'Pumpkin Spice Poke Cake'
+2911 'Rice Recipes For Each Day Of The Week'
+2922 ' Dips For All Your Chips'
+2929 'Guac Lovers Only!'
+2917 'Recipes That Will Actually Leave Your Mouth Watering'
+2914 'Quick And Easy Snacks For Night Owls'
+2910 'Easy Homemade Chicken Recipes'
+2901 'Cheese-Stuffed Foods That Will Change Your Life'
+2900 'The Best Vegan Desserts You Can Make!'
+7885 'Blackened Curried Goat With Potatoes'
+7921 'Pumpkin Pie Bars'
+7920 'Hash Brown Mini Quiches'
+7919 'Winter Vegetable Gratin'
+7914 'Honey Baked Ham By Alvin'
+7915 'Gingerbread Cheesecake Cookie Cups By Jasmine'
+7913 '40-Clove Garlic Bread'
+2937 'Everything You Can Make With Cornbread Chili'
+2940 'Hearty And Healthy Black Bean Meals'
+2927 'Everything You Can Make With Bananas'
+2924 'This Is How You Should Be Eating Your Baked Potato'
+2913 '3-Course Italian-Inspired Meal'
+
+
+approved_at: 1517873738
+aspect_ratio: "1:1"
+beauty_url: null
+brand: null
+brand_id: null
+buzz_id: 4742192
+canonical_id: "recipe:3440"
+compilations: (2) [{…}, {…}]
+cook_time_minutes: null
+country: "US"
+created_at: 1517522483
+credits: Array(1)
+0: {name: 'Chris Salicrup', type: 'internal'}
+length: 1
+[[Prototype]]: Array(0)
+description: null
+draft_status: "published"
+facebook_posts: []
+id: 3440
+inspired_by_url: null
+instructions: (8) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+is_one_top: false
+is_shoppable: true
+keywords: "healthy, light, potatoes, sauce"
+language: "eng"
+name: "Paprika-Spiced Chicken With Lemon Yogurt And Crispy Potatoes"
+num_servings: 4
+nutrition: {fat: 18, calories: 373, sugar: 7, carbohydrates: 32, fiber: 3, …}
+nutrition_visibility: "auto"
+original_video_url: "https://s3.amazonaws.com/video-api-prod/assets/26401f7b70ad4bb4ab352b1a7447104e/chickenfinalFB.mp4"
+prep_time_minutes: null
+promotion: "full"
+renditions: (5) [{…}, {…}, {…}, {…}, {…}]
+sections: [{…}]
+seo_title: null
+servings_noun_plural: "servings"
+servings_noun_singular: "serving"
+show: {name: 'Tasty: Tasty Grill', id: 51}
+show_id: 51
+slug: "paprika-spiced-chicken-with-lemon-yogurt-and-crispy-potatoes"
+tags: (15) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+thumbnail_alt_text: ""
+thumbnail_url: "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/134449.jpg"
+tips_and_ratings_enabled: true
+topics: (4) [{…}, {…}, {…}, {…}]
+total_time_minutes: null
+total_time_tier: null
+updated_at: 1560182159
+user_ratings: {score: 0.952297, count_negative: 27, count_positive: 539}
+video_ad_content: "none"
+video_id: 40120
+video_url: "https://vid.tasty.co/output/76288/hls24_1517533692.m3u8"
+yields: "Servings: 4"
+_id: 3440
+_index: "recipes-20211110191617"
+_op_type: "index"
+_type: "recipe"
+
+{
+    "id": 7928,
+    "inspired_by_url": null,
+    "updated_at": 1636400440,
+    "sections": [
+        {
+            "position": 1,
+            "components": [
+                {
+                    "ingredient": {
+                        "created_at": 1494806355,
+                        "updated_at": 1509035272,
+                        "id": 291,
+                        "name": "unsalted butter",
+                        "display_singular": "unsalted butter",
+                        "display_plural": "unsalted butters"
+                    },
+                    "id": 89717,
+                    "raw_text": "Unsalted butter, for greasing",
+                    "extra_comment": "for greasing",
+                    "position": 2,
+                    "measurements": [
+                        {
+                            "id": 668776,
+                            "quantity": "0",
+                            "unit": {
+                                "system": "none",
+                                "name": "",
+                                "abbreviation": "",
+                                "display_singular": "",
+                                "display_plural": ""
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 89718,
+                    "raw_text": "1 medium butternut squash",
+                    "extra_comment": "",
+                    "position": 3,
+                    "measurements": [
+                        {
+                            "id": 668756,
+                            "quantity": "1",
+                            "unit": {
+                                "name": "",
+                                "abbreviation": "",
+                                "display_singular": "",
+                                "display_plural": "",
+                                "system": "none"
+                            }
+                        }
+                    ],
+                    "ingredient": {
+                        "updated_at": 1540396047,
+                        "id": 4823,
+                        "name": "medium butternut squash",
+                        "display_singular": "medium butternut squash",
+                        "display_plural": "medium butternut squashes",
+                        "created_at": 1540396047
+                    }
+                },
+                {
+                    "raw_text": "3 tablespoons olive oil",
+                    "extra_comment": "",
+                    "position": 4,
+                    "measurements": [
+                        {
+                            "id": 668757,
+                            "quantity": "3",
+                            "unit": {
+                                "display_singular": "tablespoon",
+                                "display_plural": "tablespoons",
+                                "system": "imperial",
+                                "name": "tablespoon",
+                                "abbreviation": "tbsp"
+                            }
+                        }
+                    ],
+                    "ingredient": {
+                        "display_plural": "olive oils",
+                        "created_at": 1493306183,
+                        "updated_at": 1509035290,
+                        "id": 4,
+                        "name": "olive oil",
+                        "display_singular": "olive oil"
+                    },
+                    "id": 89719
+                },
+                {
+                    "ingredient": {
+                        "id": 11,
+                        "name": "kosher salt",
+                        "display_singular": "kosher salt",
+                        "display_plural": "kosher salts",
+                        "created_at": 1493307153,
+                        "updated_at": 1509035289
+                    },
+                    "id": 89720,
+                    "raw_text": "1 tablespoon kosher salt",
+                    "extra_comment": "",
+                    "position": 5,
+                    "measurements": [
+                        {
+                            "id": 668763,
+                            "quantity": "1",
+                            "unit": {
+                                "name": "tablespoon",
+                                "abbreviation": "tbsp",
+                                "display_singular": "tablespoon",
+                                "display_plural": "tablespoons",
+                                "system": "imperial"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 89721,
+                    "raw_text": "2 teaspoons freshly ground black pepper",
+                    "extra_comment": "",
+                    "position": 6,
+                    "measurements": [
+                        {
+                            "id": 668760,
+                            "quantity": "2",
+                            "unit": {
+                                "name": "teaspoon",
+                                "abbreviation": "tsp",
+                                "display_singular": "teaspoon",
+                                "display_plural": "teaspoons",
+                                "system": "imperial"
+                            }
+                        }
+                    ],
+                    "ingredient": {
+                        "id": 166,
+                        "name": "freshly ground black pepper",
+                        "display_singular": "freshly ground black pepper",
+                        "display_plural": "freshly ground black peppers",
+                        "created_at": 1493925438,
+                        "updated_at": 1509035282
+                    }
+                },
+                {
+                    "ingredient": {
+                        "id": 419,
+                        "name": "granulated sugar",
+                        "display_singular": "granulated sugar",
+                        "display_plural": "granulated sugars",
+                        "created_at": 1494989637,
+                        "updated_at": 1509035262
+                    },
+                    "id": 89722,
+                    "raw_text": "1 cup granulated sugar",
+                    "extra_comment": "",
+                    "position": 7,
+                    "measurements": [
+                        {
+                            "id": 668761,
+                            "quantity": "1",
+                            "unit": {
+                                "abbreviation": "c",
+                                "display_singular": "cup",
+                                "display_plural": "cups",
+                                "system": "imperial",
+                                "name": "cup"
+                            }
+                        },
+                        {
+                            "id": 668758,
+                            "quantity": "200",
+                            "unit": {
+                                "name": "gram",
+                                "abbreviation": "g",
+                                "display_singular": "g",
+                                "display_plural": "g",
+                                "system": "metric"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "position": 8,
+                    "measurements": [
+                        {
+                            "id": 668770,
+                            "quantity": "2",
+                            "unit": {
+                                "name": "",
+                                "abbreviation": "",
+                                "display_singular": "",
+                                "display_plural": "",
+                                "system": "none"
+                            }
+                        }
+                    ],
+                    "ingredient": {
+                        "created_at": 1494382414,
+                        "updated_at": 1509035275,
+                        "id": 253,
+                        "name": "large egg",
+                        "display_singular": "large egg",
+                        "display_plural": "large eggs"
+                    },
+                    "id": 89723,
+                    "raw_text": "2 large eggs, room temperature",
+                    "extra_comment": "room temperature"
+                },
+                {
+                    "ingredient": {
+                        "created_at": 1493314636,
+                        "updated_at": 1509035288,
+                        "id": 21,
+                        "name": "milk",
+                        "display_singular": "milk",
+                        "display_plural": "milks"
+                    },
+                    "id": 89724,
+                    "raw_text": "½ cup milk",
+                    "extra_comment": "",
+                    "position": 9,
+                    "measurements": [
+                        {
+                            "id": 668766,
+                            "quantity": "½",
+                            "unit": {
+                                "name": "cup",
+                                "abbreviation": "c",
+                                "display_singular": "cup",
+                                "display_plural": "cups",
+                                "system": "imperial"
+                            }
+                        },
+                        {
+                            "id": 668765,
+                            "quantity": "120",
+                            "unit": {
+                                "system": "metric",
+                                "name": "milliliter",
+                                "abbreviation": "mL",
+                                "display_singular": "mL",
+                                "display_plural": "mL"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ingredient": {
+                        "id": 291,
+                        "name": "unsalted butter",
+                        "display_singular": "unsalted butter",
+                        "display_plural": "unsalted butters",
+                        "created_at": 1494806355,
+                        "updated_at": 1509035272
+                    },
+                    "id": 89725,
+                    "raw_text": "¼ cup (½ stick) unsalted butter, melted and cooled",
+                    "extra_comment": "melted and cooled",
+                    "position": 10,
+                    "measurements": [
+                        {
+                            "quantity": "½",
+                            "unit": {
+                                "name": "stick",
+                                "abbreviation": "stick",
+                                "display_singular": "stick",
+                                "display_plural": "sticks",
+                                "system": "none"
+                            },
+                            "id": 668759
+                        }
+                    ]
+                },
+                {
+                    "id": 89726,
+                    "raw_text": "1 teaspoon vanilla extract",
+                    "extra_comment": "",
+                    "position": 11,
+                    "measurements": [
+                        {
+                            "quantity": "1",
+                            "unit": {
+                                "display_plural": "teaspoons",
+                                "system": "imperial",
+                                "name": "teaspoon",
+                                "abbreviation": "tsp",
+                                "display_singular": "teaspoon"
+                            },
+                            "id": 668762
+                        }
+                    ],
+                    "ingredient": {
+                        "updated_at": 1509035284,
+                        "id": 103,
+                        "name": "vanilla extract",
+                        "display_singular": "vanilla extract",
+                        "display_plural": "vanilla extracts",
+                        "created_at": 1493745620
+                    }
+                },
+                {
+                    "raw_text": "1 teaspoon five-spice powder",
+                    "extra_comment": "",
+                    "position": 12,
+                    "measurements": [
+                        {
+                            "id": 668767,
+                            "quantity": "1",
+                            "unit": {
+                                "name": "teaspoon",
+                                "abbreviation": "tsp",
+                                "display_singular": "teaspoon",
+                                "display_plural": "teaspoons",
+                                "system": "imperial"
+                            }
+                        }
+                    ],
+                    "ingredient": {
+                        "id": 1783,
+                        "name": "five spice",
+                        "display_singular": "five spice",
+                        "display_plural": "five spices",
+                        "created_at": 1497081080,
+                        "updated_at": 1509035166
+                    },
+                    "id": 89727
+                }
+            ],
+            "name": "Filling"
+        },
+        {
+            "components": [
+                {
+                    "position": 14,
+                    "measurements": [
+                        {
+                            "id": 668771,
+                            "quantity": "1",
+                            "unit": {
+                                "display_plural": "cups",
+                                "system": "imperial",
+                                "name": "cup",
+                                "abbreviation": "c",
+                                "display_singular": "cup"
+                            }
+                        },
+                        {
+                            "id": 668769,
+                            "quantity": "200",
+                            "unit": {
+                                "name": "gram",
+                                "abbreviation": "g",
+                                "display_singular": "g",
+                                "display_plural": "g",
+                                "system": "metric"
+                            }
+                        }
+                    ],
+                    "ingredient": {
+                        "id": 707,
+                        "name": "light brown sugar",
+                        "display_singular": "light brown sugar",
+                        "display_plural": "light brown sugars",
+                        "created_at": 1495671124,
+                        "updated_at": 1509035239
+                    },
+                    "id": 89729,
+                    "raw_text": "1 cup light brown sugar",
+                    "extra_comment": ""
+                },
+                {
+                    "extra_comment": "melted and cooled",
+                    "position": 15,
+                    "measurements": [
+                        {
+                            "id": 668768,
+                            "quantity": "½",
+                            "unit": {
+                                "system": "none",
+                                "name": "stick",
+                                "abbreviation": "stick",
+                                "display_singular": "stick",
+                                "display_plural": "sticks"
+                            }
+                        }
+                    ],
+                    "ingredient": {
+                        "id": 291,
+                        "name": "unsalted butter",
+                        "display_singular": "unsalted butter",
+                        "display_plural": "unsalted butters",
+                        "created_at": 1494806355,
+                        "updated_at": 1509035272
+                    },
+                    "id": 89730,
+                    "raw_text": "¼ cup (½ stick) unsalted butter, melted and cooled"
+                },
+                {
+                    "measurements": [
+                        {
+                            "quantity": "½",
+                            "unit": {
+                                "name": "cup",
+                                "abbreviation": "c",
+                                "display_singular": "cup",
+                                "display_plural": "cups",
+                                "system": "imperial"
+                            },
+                            "id": 668773
+                        },
+                        {
+                            "id": 668772,
+                            "quantity": "65",
+                            "unit": {
+                                "system": "metric",
+                                "name": "gram",
+                                "abbreviation": "g",
+                                "display_singular": "g",
+                                "display_plural": "g"
+                            }
+                        }
+                    ],
+                    "ingredient": {
+                        "display_singular": "self-rising flour",
+                        "display_plural": "self-rising flours",
+                        "created_at": 1495994714,
+                        "updated_at": 1509035224,
+                        "id": 895,
+                        "name": "self-rising flour"
+                    },
+                    "id": 89731,
+                    "raw_text": "½ cup self-rising flour, such as White Lily",
+                    "extra_comment": "such as white lily",
+                    "position": 16
+                },
+                {
+                    "id": 89732,
+                    "raw_text": "½ teaspoon kosher salt",
+                    "extra_comment": "",
+                    "position": 17,
+                    "measurements": [
+                        {
+                            "unit": {
+                                "display_plural": "teaspoons",
+                                "system": "imperial",
+                                "name": "teaspoon",
+                                "abbreviation": "tsp",
+                                "display_singular": "teaspoon"
+                            },
+                            "id": 668764,
+                            "quantity": "½"
+                        }
+                    ],
+                    "ingredient": {
+                        "display_plural": "kosher salts",
+                        "created_at": 1493307153,
+                        "updated_at": 1509035289,
+                        "id": 11,
+                        "name": "kosher salt",
+                        "display_singular": "kosher salt"
+                    }
+                },
+                {
+                    "raw_text": "1 cup pecan halves",
+                    "extra_comment": "",
+                    "position": 18,
+                    "measurements": [
+                        {
+                            "id": 668775,
+                            "quantity": "1",
+                            "unit": {
+                                "display_plural": "cups",
+                                "system": "imperial",
+                                "name": "cup",
+                                "abbreviation": "c",
+                                "display_singular": "cup"
+                            }
+                        },
+                        {
+                            "unit": {
+                                "system": "metric",
+                                "name": "gram",
+                                "abbreviation": "g",
+                                "display_singular": "g",
+                                "display_plural": "g"
+                            },
+                            "id": 668774,
+                            "quantity": "125"
+                        }
+                    ],
+                    "ingredient": {
+                        "id": 9295,
+                        "name": "pecan halves",
+                        "display_singular": "pecan half",
+                        "display_plural": "pecan halves",
+                        "created_at": 1636396958,
+                        "updated_at": 1636396958
+                    },
+                    "id": 89733
+                }
+            ],
+            "name": "Topping",
+            "position": 2
+        }
+    ],
+    "user_ratings": {
+        "count_negative": 0,
+        "score": null,
+        "count_positive": 0
+    },
+    "topics": [
+        {
+            "name": "Baked Goods",
+            "slug": "baked-goods"
+        },
+        {
+            "name": "Fall Recipes",
+            "slug": "fall"
+        },
+        {
+            "name": "American",
+            "slug": "american"
+        }
+    ],
+    "yields": "Servings: 8–10",
+    "brand_id": null,
+    "country": "US",
+    "description": "A cross between a side dish and a pie, this sweet and savory butternut squash tastes as good as a hug from your best friend feels.",
+    "name": "My Brother’s Butternut Squash",
+    "prep_time_minutes": 10,
+    "thumbnail_alt_text": "",
+    "video_url": null,
+    "compilations": [],
+    "facebook_posts": [],
+    "created_at": 1636143102,
+    "servings_noun_singular": "serving",
+    "tips_and_ratings_enabled": true,
+    "original_video_url": null,
+    "video_ad_content": null,
+    "aspect_ratio": "16:9",
+    "buzz_id": null,
+    "cook_time_minutes": 60,
+    "promotion": "full",
+    "slug": "my-brothers-butternut-squash",
+    "video_id": null,
+    "total_time_tier": {
+        "tier": "under_1.5_hours",
+        "display_tier": "Under 1.5 hours"
+    },
+    "num_servings": 8,
+    "servings_noun_plural": "servings",
+    "show_id": 17,
+    "nutrition_visibility": "auto",
+    "instructions": [
+        {
+            "id": 69136,
+            "display_text": "Make the filling: Preheat the oven to 425°F (220°C). Grease a 9-inch-wide, 2-inch-deep pie dish with butter.",
+            "position": 1,
+            "start_time": 0,
+            "end_time": 0,
+            "temperature": 425,
+            "appliance": "oven"
+        },
+        {
+            "start_time": 0,
+            "end_time": 0,
+            "temperature": null,
+            "appliance": null,
+            "id": 69137,
+            "display_text": "Cut the butternut squash in half lengthwise and scoop out the seeds. Place the squash on an unlined baking sheet with the cut side up and drizzle the olive oil over each half. Sprinkle the squash with the salt and pepper, making sure to cover completely. Roast the squash until tender and beginning to brown, about 30 minutes.",
+            "position": 2
+        },
+        {
+            "start_time": 0,
+            "end_time": 0,
+            "temperature": null,
+            "appliance": null,
+            "id": 69138,
+            "display_text": "Remove the squash from the oven and let sit until cool enough to handle, about 15 minutes. Reduce the oven temperature to 350°F (180°C).",
+            "position": 3
+        },
+        {
+            "end_time": 0,
+            "temperature": null,
+            "appliance": null,
+            "id": 69139,
+            "display_text": "Peel the skin from the squash and transfer the flesh to a large bowl. Use your hands to gently crush the squash into bite-size pieces. Add the sugar, eggs, milk, melted butter, vanilla and five-spice. Use a wooden spoon to bring the mixture together, then pour into the prepared pie dish.",
+            "position": 4,
+            "start_time": 0
+        },
+        {
+            "id": 69140,
+            "display_text": "Make the topping: In a medium bowl, stir together the brown sugar and melted butter with a wooden spoon. Add the flour and salt and use your hands to mix until the texture resembles coarse sand.",
+            "position": 5,
+            "start_time": 0,
+            "end_time": 0,
+            "temperature": null,
+            "appliance": null
+        },
+        {
+            "start_time": 0,
+            "end_time": 0,
+            "temperature": null,
+            "appliance": null,
+            "id": 69141,
+            "display_text": "Sprinkle the topping over the squash, covering completely. Arrange the pecans halves on top in concentric circles.",
+            "position": 6
+        },
+        {
+            "appliance": null,
+            "id": 69142,
+            "display_text": "Bake until the top is golden brown and the squash begins to bubble underneath, about 30 minutes. Let cool slightly before serving.",
+            "position": 7,
+            "start_time": 0,
+            "end_time": 0,
+            "temperature": null
+        },
+        {
+            "start_time": 0,
+            "end_time": 0,
+            "temperature": null,
+            "appliance": null,
+            "id": 69143,
+            "display_text": "Enjoy!",
+            "position": 8
+        }
+    ],
+    "renditions": [],
+    "beauty_url": null,
+    "thumbnail_url": "https://img.buzzfeed.com/tasty-app-user-assets-prod-us-east-1/recipes/d1d2457c32924b47bf30a9f6e066c931.jpeg",
+    "tags": [
+        {
+            "id": 65846,
+            "name": "oven",
+            "display_name": "Oven",
+            "type": "appliance"
+        },
+        {
+            "display_name": "Chef's Knife",
+            "type": "equipment",
+            "id": 1280501,
+            "name": "chefs_knife"
+        },
+        {
+            "display_name": "Bakery Goods",
+            "type": "meal",
+            "id": 65857,
+            "name": "bakery_goods"
+        },
+        {
+            "id": 1247788,
+            "name": "spatula",
+            "display_name": "Spatula",
+            "type": "equipment"
+        },
+        {
+            "type": "cuisine",
+            "id": 64444,
+            "name": "american",
+            "display_name": "American"
+        },
+        {
+            "id": 1280500,
+            "name": "baking_pan",
+            "display_name": "Baking Pan",
+            "type": "equipment"
+        },
+        {
+            "id": 1247782,
+            "name": "pie_dish",
+            "display_name": "Pie Dish",
+            "type": "equipment"
+        },
+        {
+            "id": 64492,
+            "name": "bake",
+            "display_name": "Bake",
+            "type": "method"
+        },
+        {
+            "name": "wooden_spoon",
+            "display_name": "Wooden Spoon",
+            "type": "equipment",
+            "id": 1247794
+        },
+        {
+            "id": 64462,
+            "name": "comfort_food",
+            "display_name": "Comfort Food",
+            "type": "dietary"
+        },
+        {
+            "id": 64508,
+            "name": "fall",
+            "display_name": "Fall",
+            "type": "seasonal"
+        },
+        {
+            "display_name": "Mixing Bowl",
+            "type": "equipment",
+            "id": 1280510,
+            "name": "mixing_bowl"
+        }
+    ],
+    "nutrition": {
+        "fat": 7,
+        "protein": 4,
+        "sugar": 39,
+        "fiber": 4,
+        "updated_at": "2021-11-09T07:01:54+01:00",
+        "calories": 299,
+        "carbohydrates": 57
+    },
+    "show": {
+        "name": "Tasty",
+        "id": 17
+    },
+    "approved_at": 1636400440,
+    "draft_status": "published",
+    "keywords": "",
+    "seo_title": "",
+    "total_time_minutes": 90,
+    "brand": null,
+    "credits": [
+        {
+            "type": "internal",
+            "name": null
+        }
+    ],
+    "is_one_top": false,
+    "is_shoppable": true,
+    "language": "eng",
+    "canonical_id": "recipe:7928"
+}
