@@ -1,3 +1,4 @@
+// npm run migrate:latest
 exports.up = function (knex) {
   // create tables
   return knex.schema
@@ -6,19 +7,32 @@ exports.up = function (knex) {
       table.string("first_name").notNullable();
       table.string("last_name").notNullable();
       table.string("email").notNullable();
+      table.string("password", 50).notNullable();
     })
     .createTable("units", function (table) {
       table.increments("id");
       table.string("unit").notNullable();
+      table.string("unit_description").notNullable();
+    })
+    .createTable("categories", function (table) {
+      table.increments("id");
+      table.string("category").notNullable();
     })
     .createTable("ingredients", function (table) {
       table.increments("id");
       table.string("name").notNullable();
+      table.integer("category_id").unsigned().notNullable();
       table.integer("default_unit_id").unsigned().notNullable();
       table
         .foreign("default_unit_id")
         .references("id")
         .inTable("units")
+        .onUpdate("CASCADE")
+        .onDelete("CASCADE");
+      table
+        .foreign("category_id")
+        .references("id")
+        .inTable("categories")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
     })
@@ -71,10 +85,11 @@ exports.up = function (knex) {
     .createTable("grocery_list", function (table) {
       table.increments("id");
       table.integer("ingredient_id").unsigned().notNullable();
-      table.string("ingredient_qty").notNullable();
-      table.integer("ingredient_unit_id").unsigned().notNullable();
-      table.string("ingredient_brand");
-      table.string("ingredient_shelf_life");
+      table.string("qty").notNullable();
+      table.integer("unit_id").unsigned().notNullable();
+      table.string("category").notNullable();
+      table.string("brand");
+      table.string("shelf_life");
       table
         .foreign("ingredient_id")
         .references("id")
@@ -82,7 +97,7 @@ exports.up = function (knex) {
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
       table
-        .foreign("ingredient_unit_id")
+        .foreign("unit_id")
         .references("id")
         .inTable("units")
         .onUpdate("CASCADE")
@@ -145,6 +160,7 @@ exports.up = function (knex) {
     });
 };
 
+// npm run migrate:rollback
 exports.down = function (knex) {
   // drop tables
   return knex.schema
@@ -155,5 +171,6 @@ exports.down = function (knex) {
     .dropTable("users")
     .dropTable("tasty_recipes")
     .dropTable("ingredients")
+    .dropTable("categories")
     .dropTable("units");
 };
