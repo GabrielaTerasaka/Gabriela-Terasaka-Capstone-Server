@@ -1,9 +1,13 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
+const readFile = require("./utils/manageFiles");
+const knex = require("knex")(require("./knexfile").development);
 
 const fs = require("fs");
 
-const PORT = 8080;
+const PORT = process.env.PORT || process.env.LOCAL_PORT;
+// const PORT = 8080;
 
 app.use(express.static("public"));
 app.use(express.json());
@@ -67,6 +71,11 @@ app.get("/", (req, res) => {
       // res.json(onlyRecipe7);
     }
   });
+});
+
+app.get("/data", (req, res) => {
+  // console.log(readFile("./data/recipes.json"));
+  res.json({ message: readFile("./data/recipes.json") });
 });
 
 app.listen(process.env.PORT || PORT, () => {
