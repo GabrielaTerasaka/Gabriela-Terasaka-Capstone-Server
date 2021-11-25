@@ -39,10 +39,19 @@ exports.up = function (knex) {
     .createTable("tasty_recipes", function (table) {
       table.increments("id");
       table.string("title").notNullable();
+    })
+    .createTable("tasty_recipes_list", function (table) {
+      table.integer("tasty_recipes_id").unsigned().notNullable();
       table.integer("ingredients_id").unsigned().notNullable();
       table.string("ingredient_qty").notNullable();
       table.integer("ingredient_unit_id").unsigned().notNullable();
       table.string("instructions").notNullable();
+      table
+        .foreign("tasty_recipes_id")
+        .references("id")
+        .inTable("tasty_recipes")
+        .onUpdate("CASCADE")
+        .onDelete("CASCADE");
       table
         .foreign("ingredients_id")
         .references("id")
@@ -59,14 +68,23 @@ exports.up = function (knex) {
     .createTable("personal_recipes", function (table) {
       table.increments("id");
       table.integer("user_id").unsigned().notNullable();
+      table
+        .foreign("user_id")
+        .references("id")
+        .inTable("users")
+        .onUpdate("CASCADE")
+        .onDelete("CASCADE");
+    })
+    .createTable("personal_recipes_list", function (table) {
+      table.integer("personal_recipes_id").unsigned().notNullable();
       table.integer("ingredients_id").unsigned().notNullable();
       table.string("ingredient_qty").notNullable();
       table.integer("ingredient_unit_id").unsigned().notNullable();
       table.string("instructions").notNullable();
       table
-        .foreign("user_id")
+        .foreign("personal_recipes_id")
         .references("id")
-        .inTable("users")
+        .inTable("personal_recipes")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
       table
@@ -84,12 +102,30 @@ exports.up = function (knex) {
     })
     .createTable("grocery_list", function (table) {
       table.increments("id");
+      table.string("title").notNullable();
+      table.integer("user_id").unsigned().notNullable();
+      table
+        .foreign("user_id")
+        .references("id")
+        .inTable("users")
+        .onUpdate("CASCADE")
+        .onDelete("CASCADE");
+    })
+    .createTable("grocery_list_items", function (table) {
+      table.integer("grocery_list_id").unsigned().notNullable();
       table.integer("ingredient_id").unsigned().notNullable();
       table.string("qty").notNullable();
       table.integer("unit_id").unsigned().notNullable();
       table.string("category").notNullable();
       table.string("brand");
       table.string("shelf_life");
+      table.integer("shared_users_id").unsigned().notNullable();
+      table
+        .foreign("grocery_list_id")
+        .references("id")
+        .inTable("grocery_list")
+        .onUpdate("CASCADE")
+        .onDelete("CASCADE");
       table
         .foreign("ingredient_id")
         .references("id")
@@ -102,34 +138,26 @@ exports.up = function (knex) {
         .inTable("units")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
-    })
-    .createTable("grocery_list_users", function (table) {
-      table.increments("id");
-      table.integer("user_id").unsigned().notNullable();
-      table.integer("shared_users_id").unsigned().notNullable();
-      table.integer("grocery_list_id").unsigned().notNullable();
-      table
-        .foreign("user_id")
-        .references("id")
-        .inTable("users")
-        .onUpdate("CASCADE")
-        .onDelete("CASCADE");
       table
         .foreign("shared_users_id")
         .references("id")
         .inTable("users")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
-      table
-        .foreign("grocery_list_id")
-        .references("id")
-        .inTable("grocery_list")
-        .onUpdate("CASCADE")
-        .onDelete("CASCADE");
     })
     .createTable("pantry", function (table) {
       table.increments("id");
+      table.string("title").notNullable();
       table.integer("user_id").unsigned().notNullable();
+      table
+        .foreign("user_id")
+        .references("id")
+        .inTable("users")
+        .onUpdate("CASCADE")
+        .onDelete("CASCADE");
+    })
+    .createTable("pantry_items", function (table) {
+      table.integer("pantry_id").unsigned().notNullable();
       table.integer("ingredient_id").unsigned().notNullable();
       table.string("ingredient_qty").notNullable();
       table.integer("ingredient_unit_id").unsigned().notNullable();
@@ -140,11 +168,12 @@ exports.up = function (knex) {
         .notNullable()
         .defaultTo(Date.now());
       table
-        .foreign("user_id")
+        .foreign("pantry_id")
         .references("id")
-        .inTable("users")
+        .inTable("pantry")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
+
       table
         .foreign("ingredient_id")
         .references("id")
@@ -164,13 +193,16 @@ exports.up = function (knex) {
 exports.down = function (knex) {
   // drop tables
   return knex.schema
+    .dropTable("pantry_items")
     .dropTable("pantry")
-    .dropTable("grocery_list_users")
+    .dropTable("grocery_list_items")
     .dropTable("grocery_list")
+    .dropTable("personal_recipes_list")
     .dropTable("personal_recipes")
-    .dropTable("users")
+    .dropTable("tasty_recipes_list")
     .dropTable("tasty_recipes")
     .dropTable("ingredients")
     .dropTable("categories")
+    .dropTable("users")
     .dropTable("units");
 };
