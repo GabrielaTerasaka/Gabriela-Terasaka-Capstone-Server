@@ -26,9 +26,10 @@ router.post("/", (req, res) => {
             password: password,
             email: email.toLowerCase(),
           })
-          .then(() => {
+          .then((data) => {
             const token = jwt.sign(
               {
+                data: data,
                 first_name,
                 last_name,
                 email,

@@ -9,6 +9,6 @@ router
   .route("/")
   .get((req, res) => {})
   .post((req, res) => {})
-  .post((req, res) => {});
+  .put((req, res) => {});
 
 module.exports = router;
