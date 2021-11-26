@@ -26,17 +26,23 @@ router.post("/", (req, res) => {
             password: password,
             email: email.toLowerCase(),
           })
-          .then((data) => {
+          .then(() => {
+            return knex("users");
+          })
+          .then((usersData) => {
+            const foundNewUser = usersData.find(
+              (user) => user.email.toLowerCase() === email.toLowerCase()
+            );
             const token = jwt.sign(
               {
-                data: data,
-                first_name,
-                last_name,
-                email,
-                loginTime: Date.now(),
+                id: foundNewUser.id,
+                first_name: foundNewUser.first_name,
+                last_name: foundNewUser.last_name,
+                email: foundNewUser.email,
+                signup: Date.now(),
               },
               SECRET_KEY,
-              { expiresIn: "2h" }
+              { expiresIn: "1d" }
             );
             res.status(200).json(token);
           });
@@ -47,7 +53,6 @@ router.post("/", (req, res) => {
         message: `Error getting users` + error,
       });
     });
-  //   }
 });
 
 module.exports = router;

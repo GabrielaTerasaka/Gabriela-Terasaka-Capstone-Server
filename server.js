@@ -8,13 +8,13 @@ const fs = require("fs");
 
 const PORT = process.env.PORT || process.env.LOCAL_PORT;
 
+app.use(express.static("public"));
+app.use(express.json());
+
 // routes
 const signupRoute = require("./routes/signup");
 const loginRoute = require("./routes/login");
 const usersRoutes = require("./routes/users");
-
-app.use(express.static("public"));
-app.use(express.json());
 
 app.use("/signup", signupRoute);
 app.use("/login", loginRoute);

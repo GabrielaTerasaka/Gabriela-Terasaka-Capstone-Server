@@ -26,7 +26,7 @@ router.get("/", (req, res) => {
           loginTime: Date.now(),
         },
         SECRET_KEY,
-        { expiresIn: "2h" }
+        { expiresIn: "1d" }
       );
       res.status(200).json(token);
       return;
