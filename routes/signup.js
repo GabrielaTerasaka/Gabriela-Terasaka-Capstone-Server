@@ -7,17 +7,14 @@ const router = require("express").Router();
 
 router.post("/", (req, res) => {
   const { first_name, last_name, password, email } = req.body;
-  //   console.log(req.body);
-  //   if (!req.body || !first_name || !last_name || !password || !email) {
-  //     res.status(404).json({ message: "Missing information" });
-  //   } else {
+
   knex("users")
     .then((usersData) => {
       const foundUser = usersData.find(
         (user) => user.email.toLowerCase() === email.toLowerCase()
       );
       if (foundUser) {
-        res.status(400).json({ message: "Email already registered" });
+        res.status(401).json({ message: "Email already registered" });
       } else {
         knex("users")
           .insert({

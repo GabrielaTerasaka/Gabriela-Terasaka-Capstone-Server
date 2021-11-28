@@ -5,11 +5,13 @@ const readFile = require("./utils/manageFiles");
 const knex = require("knex")(require("./knexfile").development);
 const jwt = require("jsonwebtoken");
 const fs = require("fs");
+const cors = require("cors");
 
 const PORT = process.env.PORT || process.env.LOCAL_PORT;
 
 app.use(express.static("public"));
 app.use(express.json());
+app.use(cors());
 
 // routes
 const signupRoute = require("./routes/signup");
