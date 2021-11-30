@@ -2,7 +2,9 @@
 const usersArr = require("../data_seeds/users");
 const unitsArr = require("../data_seeds/units");
 const categoriesArr = require("../data_seeds/categories");
-const ingredientssArr = require("../data_seeds/ingredients");
+const ingredientsArr = require("../data_seeds/ingredients");
+const groceryListsArr = require("../data_seeds/grocery_list");
+const groceryUsersArr = require("../data_seeds/grocery_list_users");
 
 exports.seed = function (knex) {
   // Deletes ALL existing entries
@@ -18,6 +20,12 @@ exports.seed = function (knex) {
       return knex("categories").insert(categoriesArr);
     })
     .then(function () {
-      return knex("ingredients").insert(ingredientssArr);
+      return knex("ingredients").insert(ingredientsArr);
+    })
+    .then(function () {
+      return knex("grocery_list").insert(groceryListsArr);
+    })
+    .then(function () {
+      return knex("grocery_list_users").insert(groceryUsersArr);
     });
 };

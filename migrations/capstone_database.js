@@ -21,7 +21,7 @@ exports.up = function (knex) {
     .createTable("ingredients", function (table) {
       table.increments("id");
       table.string("name").notNullable();
-      table.integer("category_id").unsigned().notNullable();
+      table.integer("default_category_id").unsigned().notNullable();
       table.integer("default_unit_id").unsigned().notNullable();
       table
         .foreign("default_unit_id")
@@ -30,7 +30,7 @@ exports.up = function (knex) {
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
       table
-        .foreign("category_id")
+        .foreign("default_category_id")
         .references("id")
         .inTable("categories")
         .onUpdate("CASCADE")
@@ -111,6 +111,22 @@ exports.up = function (knex) {
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
     })
+    .createTable("grocery_list_users", function (table) {
+      table.integer("list_id").unsigned().notNullable();
+      table.integer("user_id").unsigned().notNullable();
+      table
+        .foreign("user_id")
+        .references("id")
+        .inTable("users")
+        .onUpdate("CASCADE")
+        .onDelete("CASCADE");
+      table
+        .foreign("list_id")
+        .references("id")
+        .inTable("grocery_list")
+        .onUpdate("CASCADE")
+        .onDelete("CASCADE");
+    })
     .createTable("grocery_list_items", function (table) {
       table.integer("grocery_list_id").unsigned().notNullable();
       table.integer("ingredient_id").unsigned().notNullable();
@@ -119,7 +135,6 @@ exports.up = function (knex) {
       table.string("category").notNullable();
       table.string("brand");
       table.string("shelf_life");
-      table.integer("shared_users_id").unsigned().notNullable();
       table
         .foreign("grocery_list_id")
         .references("id")
@@ -136,12 +151,6 @@ exports.up = function (knex) {
         .foreign("unit_id")
         .references("id")
         .inTable("units")
-        .onUpdate("CASCADE")
-        .onDelete("CASCADE");
-      table
-        .foreign("shared_users_id")
-        .references("id")
-        .inTable("users")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
     })
@@ -196,6 +205,7 @@ exports.down = function (knex) {
     .dropTable("pantry_items")
     .dropTable("pantry")
     .dropTable("grocery_list_items")
+    .dropTable("grocery_list_users")
     .dropTable("grocery_list")
     .dropTable("personal_recipes_list")
     .dropTable("personal_recipes")

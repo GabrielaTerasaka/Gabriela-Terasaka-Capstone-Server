@@ -60,6 +60,9 @@ module.exports = [
     category: "household",
   },
   {
+    category: "pharmacy",
+  },
+  {
     category: "others",
   },
 ];
