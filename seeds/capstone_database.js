@@ -6,6 +6,7 @@ const ingredientsArr = require("../data_seeds/ingredients");
 const groceryListsArr = require("../data_seeds/grocery_list");
 const groceryUsersArr = require("../data_seeds/grocery_list_users");
 const groceryItemsArr = require("../data_seeds/grocery_list_items");
+const pantryItemsArr = require("../data_seeds/pantry_items");
 
 exports.seed = function (knex) {
   // Deletes ALL existing entries
@@ -32,6 +33,9 @@ exports.seed = function (knex) {
       })
       .then(function () {
         return knex("grocery_list_items").insert(groceryItemsArr);
+      })
+      .then(function () {
+        return knex("pantry_items").insert(pantryItemsArr);
       })
   );
 };

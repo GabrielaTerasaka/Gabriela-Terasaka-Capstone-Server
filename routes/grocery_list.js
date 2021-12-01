@@ -60,7 +60,34 @@ router
         });
       });
   })
-  .post((req, res) => {})
+  .post((req, res) => {
+    // console.log(req.body.headers);
+    const auth = req.body.headers.Authorization;
+    const authToken = auth.split(" ")[1];
+    const user = jwt.verify(
+      authToken,
+      process.env.SECRET_KEY,
+      (err, decode) => {
+        return decode;
+      }
+    );
+    const newList = {
+      title: `List - ${user.first_name}`,
+      user_id: user.id,
+    };
+
+    knex("grocery_list")
+      .insert(newList)
+      .then((data) => {
+        // console.log(data);
+        res.status(200).json(data);
+      })
+      .catch(() => {
+        res.status(400).json({
+          message: `Error getting users`,
+        });
+      });
+  })
   .put((req, res) => {});
 
 router
@@ -98,6 +125,21 @@ router
       .then((data) => {
         // console.log(data);
         res.status(200).json(data);
+      })
+      .catch(() => {
+        res.status(400).json({
+          message: `Error getting users`,
+        });
+      });
+  })
+  .delete((req, res) => {
+    const listId = req.params.id;
+
+    knex("grocery_list")
+      .where("id", listId)
+      .del()
+      .then((data) => {
+        res.status(200).json({ message: "list successfully deleted" });
       })
       .catch(() => {
         res.status(400).json({

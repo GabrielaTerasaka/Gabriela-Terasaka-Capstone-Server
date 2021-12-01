@@ -164,23 +164,25 @@ exports.up = function (knex) {
           .onUpdate("CASCADE")
           .onDelete("CASCADE");
       })
-      .createTable("pantry", function (table) {
-        table.increments("id");
-        table.string("title").notNullable();
-        table.integer("user_id").unsigned().notNullable();
-        table
-          .foreign("user_id")
-          .references("id")
-          .inTable("users")
-          .onUpdate("CASCADE")
-          .onDelete("CASCADE");
-      })
+      // .createTable("pantry", function (table) {
+      //   table.increments("id");
+      //   table.string("title").notNullable();
+      //   table.integer("user_id").unsigned().notNullable();
+      //   table
+      //     .foreign("user_id")
+      //     .references("id")
+      //     .inTable("users")
+      //     .onUpdate("CASCADE")
+      //     .onDelete("CASCADE");
+      // })
       .createTable("pantry_items", function (table) {
-        table.integer("pantry_id").unsigned().notNullable();
+        table.integer("user_id").unsigned().notNullable();
         // table.integer("ingredient_id").unsigned().notNullable();
         table.string("ingredient_name").notNullable();
         table.string("qty").notNullable();
         table.integer("unit_id").unsigned().notNullable();
+        table.integer("category_id").unsigned().notNullable();
+
         // table.string("ingredient_brand");
         table.string("shelf_life");
         table
@@ -188,12 +190,17 @@ exports.up = function (knex) {
           .notNullable()
           .defaultTo(Date.now());
         table
-          .foreign("pantry_id")
+          .foreign("user_id")
           .references("id")
-          .inTable("pantry")
+          .inTable("users")
           .onUpdate("CASCADE")
           .onDelete("CASCADE");
-
+        table
+          .foreign("category_id")
+          .references("id")
+          .inTable("categories")
+          .onUpdate("CASCADE")
+          .onDelete("CASCADE");
         // table
         //   .foreign("ingredient_id")
         //   .references("id")
@@ -216,7 +223,7 @@ exports.down = function (knex) {
   return (
     knex.schema
       .dropTable("pantry_items")
-      .dropTable("pantry")
+      // .dropTable("pantry")
       .dropTable("grocery_list_items")
       .dropTable("grocery_list_users")
       .dropTable("grocery_list")

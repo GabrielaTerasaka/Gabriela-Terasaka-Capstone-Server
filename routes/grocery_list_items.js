@@ -29,17 +29,17 @@ router
   .put((req, res) => {
     const listId = req.params.id;
     const { newListItems } = req.body.body;
-    // console.log(title);
+    // console.log(newListItems);
     knex("grocery_list_items")
-      .where("id", listId)
+      .where("list_id", listId)
       .del()
       .then(() => {
-        // console.log(data);
+        // console.log("deleted");
         return knex("grocery_list_items").insert(newListItems);
       })
       .then(() => {
         // console.log(data);
-        return knex("grocery_list_items").where("id", listId);
+        return knex("grocery_list_items").where("list_id", listId);
       })
       .then((data) => {
         // console.log(data);

@@ -22,6 +22,7 @@ const unitsRoutes = require("./routes/units");
 const groceryRoutes = require("./routes/grocery_list");
 const groceryUsersRoutes = require("./routes/grocery_list_users");
 const groceryItemsRoutes = require("./routes/grocery_list_items");
+const pantryItemsRoutes = require("./routes/pantry_items");
 
 app.use("/signup", signupRoute);
 app.use("/login", loginRoute);
@@ -31,6 +32,7 @@ app.use("/units", unitsRoutes);
 app.use("/grocery", groceryRoutes);
 app.use("/grocery-users", groceryUsersRoutes);
 app.use("/grocery-items", groceryItemsRoutes);
+app.use("/pantry-items", pantryItemsRoutes);
 
 app.listen(process.env.PORT || PORT, () => {
   console.log("Listening server OR port 8080");
