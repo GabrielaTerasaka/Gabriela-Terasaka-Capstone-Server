@@ -21,7 +21,12 @@ router
     // console.log(user);
 
     knex("grocery_list")
-      .select({ id: "grocery_list.id", title: "title", owner: "first_name" })
+      .select({
+        id: "grocery_list.id",
+        title: "title",
+        owner: "first_name",
+        userId: "users.id",
+      })
       .join("users", "users.id", "grocery_list.user_id")
       .where({ user_id: user.id })
       .then((ownData) => {
@@ -34,6 +39,7 @@ router
             id: "grocery_list.id",
             title: "grocery_list.title",
             owner: "first_name",
+            userId: "users.id",
           })
           .where("grocery_list_users.user_id", user.id)
           .then((sharedData) => {
@@ -63,7 +69,12 @@ router
     const listId = req.params.id;
     // console.log(listId);
     knex("grocery_list")
-      .select({ id: "grocery_list.id", title: "title", owner: "first_name" })
+      .select({
+        id: "grocery_list.id",
+        title: "title",
+        owner: "first_name",
+        ownerId: "users.id",
+      })
       .join("users", "users.id", "grocery_list.user_id")
       .where("grocery_list.id", listId)
       .then((data) => {
