@@ -35,4 +35,8 @@ module.exports = [
     unit: "tsp",
     unit_description: "teaspoon",
   },
+  {
+    unit: "box",
+    unit_description: "box",
+  },
 ];

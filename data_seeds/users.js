@@ -19,8 +19,8 @@ module.exports = [
   },
   {
     first_name: "Peter",
-    last_name: "Mille",
-    email: "anne.mille@email",
-    password: "anne123",
+    last_name: "Potter",
+    email: "peter.potter@email",
+    password: "peter123",
   },
 ];

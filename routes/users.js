@@ -8,8 +8,8 @@ const jwt = require("jsonwebtoken");
 const authorize = require("../middleware/authorize");
 
 router
-  .route("/")
-  .get(authorize, (req, res) => {
+  .route("/", authorize)
+  .get((req, res) => {
     knex("users")
       .select("first_name", "last_name", "email", "id")
       .then((usersData) => {
@@ -21,7 +21,7 @@ router
         });
       });
   })
-  .put(authorize, (req, res) => {
+  .put((req, res) => {
     const { id, email: emailDecoded } = req.decoded;
     const { first_name, last_name, email: emailBody } = req.body;
     knex("users")
