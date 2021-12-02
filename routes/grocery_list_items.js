@@ -30,20 +30,45 @@ router
     const listId = req.params.id;
     const { newListItems } = req.body.body;
     // console.log(newListItems);
+    // knex("grocery_list_items")
+    //   .where("list_id", listId)
+    //   .del()
+    //   .then(() => {
+    //     // console.log("deleted");
+    //     return knex("grocery_list_items").insert(newListItems);
+    //   })
+    //   .then(() => {
+    //     // console.log(data);
+    //     return knex("grocery_list_items").where("list_id", listId);
+    //   })
+    //   .then((data) => {
+    //     // console.log(data);
+    //     res.status(200).json(data);
+    //   })
+    //   .catch(() => {
+    //     res.status(400).json({
+    //       message: `Error getting users`,
+    //     });
+    //   });
     knex("grocery_list_items")
       .where("list_id", listId)
       .del()
       .then(() => {
         // console.log("deleted");
-        return knex("grocery_list_items").insert(newListItems);
-      })
-      .then(() => {
-        // console.log(data);
-        return knex("grocery_list_items").where("list_id", listId);
-      })
-      .then((data) => {
-        // console.log(data);
-        res.status(200).json(data);
+        if (newListItems.length > 0) {
+          knex("grocery_list_items")
+            .insert(newListItems)
+            .then(() => {
+              // console.log(data);
+              return knex("grocery_list_items").where("list_id", listId);
+            })
+            .then((data) => {
+              // console.log(data);
+              res.status(200).json(data);
+            });
+        } else {
+          res.status(200).json(newListItems);
+        }
       })
       .catch(() => {
         res.status(400).json({
