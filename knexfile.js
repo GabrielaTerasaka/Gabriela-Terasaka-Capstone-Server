@@ -9,5 +9,6 @@ module.exports = {
       port: 3306,
       charset: "utf8",
     },
+    pool: { min: 0, max: 10 },
   },
 };
