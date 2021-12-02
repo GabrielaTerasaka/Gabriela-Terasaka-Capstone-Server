@@ -185,10 +185,11 @@ exports.up = function (knex) {
 
         // table.string("ingredient_brand");
         table.string("shelf_life");
-        table
-          .string("ingredient_date_bought")
-          .notNullable()
-          .defaultTo(Date.now());
+        // table
+        //   .string("ingredient_date_bought")
+        //   .notNullable()
+        //   .defaultTo(Date.now());
+        table.timestamp("ingredient_date_bought").defaultTo(knex.fn.now());
         table
           .foreign("user_id")
           .references("id")
