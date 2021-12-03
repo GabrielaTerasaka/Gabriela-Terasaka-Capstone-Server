@@ -48,15 +48,20 @@ router
           .where("user_id", decode.id)
           .del()
           .then((data) => {
-            return knex("pantry_items").insert(newArr);
-          })
-          .then(() => {
-            // console.log(data);
-            return knex("pantry_items").where("user_id", decode.id);
-          })
-          .then((data) => {
-            // console.log(data);
-            res.status(200).json(data);
+            if (newPantryItems.length > 0) {
+              knex("pantry_items")
+                .insert(newArr)
+                .then(() => {
+                  // console.log(data);
+                  return knex("pantry_items").where("user_id", decode.id);
+                })
+                .then((data) => {
+                  // console.log(data);
+                  res.status(200).json(data);
+                });
+            } else {
+              res.status(200).json(newPantryItems);
+            }
           })
           .catch(() => {
             res.status(400).json({
