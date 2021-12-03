@@ -45,7 +45,7 @@ exports.up = function (knex) {
         table.integer("tasty_recipes_id").unsigned().notNullable();
         // table.integer("ingredients_id").unsigned().notNullable();
         table.string("ingredient_name").notNullable();
-        table.string("qty").notNullable();
+        table.integer("qty").unsigned().notNullable();
         table.integer("unit_id").unsigned().notNullable();
         table.string("instructions").notNullable();
         table
@@ -81,7 +81,7 @@ exports.up = function (knex) {
         table.integer("personal_recipes_id").unsigned().notNullable();
         // table.integer("ingredients_id").unsigned().notNullable();
         table.string("ingredient_name").notNullable();
-        table.string("qty").notNullable();
+        table.integer("qty").unsigned().notNullable();
         table.integer("unit_id").unsigned().notNullable();
         table.string("instructions").notNullable();
         table
@@ -134,7 +134,7 @@ exports.up = function (knex) {
         table.integer("list_id").unsigned().notNullable();
         // table.integer("ingredient_id").unsigned().notNullable();
         table.string("ingredient_name").notNullable();
-        table.string("qty").notNullable();
+        table.integer("qty").unsigned().notNullable();
         table.integer("unit_id").unsigned().notNullable();
         table.integer("category_id").unsigned().notNullable();
         // table.string("brand");
@@ -179,7 +179,7 @@ exports.up = function (knex) {
         table.integer("user_id").unsigned().notNullable();
         // table.integer("ingredient_id").unsigned().notNullable();
         table.string("ingredient_name").notNullable();
-        table.string("qty").notNullable();
+        table.integer("qty").unsigned().notNullable();
         table.integer("unit_id").unsigned().notNullable();
         table.integer("category_id").unsigned().notNullable();
 
