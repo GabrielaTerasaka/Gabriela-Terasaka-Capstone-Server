@@ -38,4 +38,4 @@ app.listen(process.env.PORT || PORT, () => {
   console.log("Listening server OR port 8080");
 });
 
-// https://shrouded-peak-10650.herokuapp.com/images/cooking.jpg
+// https://shrouded-peak-10650.herokuapp.com/

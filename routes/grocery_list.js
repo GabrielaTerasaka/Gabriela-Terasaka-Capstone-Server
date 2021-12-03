@@ -1,5 +1,4 @@
 require("dotenv").config();
-const SECRET_KEY = process.env.SECRET_KEY;
 
 const knex = require("knex")(require("../knexfile").development);
 const jwt = require("jsonwebtoken");
@@ -18,7 +17,6 @@ router
         return decode;
       }
     );
-    // console.log(user);
 
     knex("grocery_list")
       .select({
@@ -30,8 +28,6 @@ router
       .join("users", "users.id", "grocery_list.user_id")
       .where({ user_id: user.id })
       .then((ownData) => {
-        // res.status(200).json(data);
-        // console.log(ownData);
         knex("grocery_list_users")
           .join("grocery_list", "grocery_list.id", "grocery_list_users.list_id")
           .join("users", "users.id", "grocery_list.user_id")
@@ -44,9 +40,6 @@ router
           .where("grocery_list_users.user_id", user.id)
           .then((sharedData) => {
             res.status(200).json([...ownData, ...sharedData]);
-            // console.log(sharedData);
-
-            // console.log([...ownData, ...sharedData]);
           })
           .catch(() => {
             res.status(400).json({
@@ -61,7 +54,6 @@ router
       });
   })
   .post((req, res) => {
-    // console.log(req.body.headers);
     const auth = req.body.headers.Authorization;
     const authToken = auth.split(" ")[1];
     const user = jwt.verify(
@@ -79,7 +71,6 @@ router
     knex("grocery_list")
       .insert(newList)
       .then((data) => {
-        // console.log(data);
         res.status(200).json(data);
       })
       .catch(() => {
@@ -94,7 +85,6 @@ router
   .route("/:id", authorize)
   .get((req, res) => {
     const listId = req.params.id;
-    // console.log(listId);
     knex("grocery_list")
       .select({
         id: "grocery_list.id",
@@ -105,8 +95,6 @@ router
       .join("users", "users.id", "grocery_list.user_id")
       .where("grocery_list.id", listId)
       .then((data) => {
-        // console.log(listId);
-        // console.log(data);
         res.status(200).json(data);
       })
       .catch(() => {
@@ -118,7 +106,7 @@ router
   .put((req, res) => {
     const listId = req.params.id;
     const { title } = req.body.body;
-    // console.log(title);
+
     knex("grocery_list")
       .update({ title: title })
       .where("id", listId)

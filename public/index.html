@@ -8,33 +8,5 @@
   </head>
   <body>
     <h1>Gabriela Mayumi Soga Terasaka - Capstone Project - Server Side</h1>
-
-    <h3>"/signup"</h3>
-    <p>POST:</p>
-    <code>REQUEST body { first_name, last_name, password, email }</code>
-    <code>RESPONSE {token}</code>
-
-    <h3>"/login"</h3>
-    <p>GET:</p>
-    <code>REQUEST body { password, email }</code>
-    <code>RESPONSE {token}</code>
-
-    <h3>"/users"</h3>
-    <p>GET:</p>
-    <code>REQUEST headers { token }</code>
-    <code>RESPONSE all-users [{ id, first_name, last_name, email }]</code>
-
-    <h3>"/users"</h3>
-    <p>PUT:</p>
-    <code
-      >REQUEST headers { token } & body { first_name, last_name, email:
-      emailBody }</code
-    >
-    <code>RESPONSE {token}</code>
-
-    <h3>"/users/:email"</h3>
-    <p>GET:</p>
-    <code>REQUEST headers { token }</code>
-    <code>RESPONSE { id, first_name, last_name, email }</code>
   </body>
 </html>

@@ -10,8 +10,6 @@ const authorize = require("../middleware/authorize");
 router
   .route("/", authorize)
   .get((req, res) => {
-    // console.log("users ");
-
     knex
       .select("first_name", "last_name", "email", "id")
       .from("users")

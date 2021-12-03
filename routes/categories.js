@@ -1,8 +1,6 @@
 require("dotenv").config();
-const SECRET_KEY = process.env.SECRET_KEY;
 
 const knex = require("knex")(require("../knexfile").development);
-const jwt = require("jsonwebtoken");
 const authorize = require("../middleware/authorize");
 const router = require("express").Router();
 

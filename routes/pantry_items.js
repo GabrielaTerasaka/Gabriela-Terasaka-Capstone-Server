@@ -15,8 +15,6 @@ router
       if (err) {
         res.status(403).json({ message: "Invalid or expired token" });
       } else {
-        // req.decoded = decode;
-        // console.log(decode);
         knex("pantry_items")
           .where("user_id", decode.id)
           .then((data) => {
@@ -31,11 +29,10 @@ router
     });
   })
   .put((req, res) => {
-    // console.log(req.body);
     const auth = req.body.headers.Authorization;
     const authToken = auth.split(" ")[1];
     const { newPantryItems } = req.body.body;
-    // const { newPantryItems } = req.body.body;
+
     jwt.verify(authToken, SECRET_KEY, (err, decode) => {
       if (err) {
         res.status(403).json({ message: "Invalid or expired token" });
@@ -52,11 +49,9 @@ router
               knex("pantry_items")
                 .insert(newArr)
                 .then(() => {
-                  // console.log(data);
                   return knex("pantry_items").where("user_id", decode.id);
                 })
                 .then((data) => {
-                  // console.log(data);
                   res.status(200).json(data);
                 });
             } else {
@@ -72,23 +67,8 @@ router
     });
   })
   .post((req, res) => {
-    // console.log(req.headers);
-    // console.log(req.headers.Authorization);
-    // console.log(req.body.headers.Authorization);
-    // const auth = req.body.headers.Authorization;
-    // const authToken = auth.split(" ")[1];
-    // const { addPantryItems } = req.body;
     const { addPantryItems, ownerId } = req.body.body;
 
-    // console.log(addPantryItems);
-
-    // const { addPantryItems } = req.body.body;
-    // jwt.verify(authToken, SECRET_KEY, (err, decode) => {
-    //   if (err) {
-    //     res.status(403).json({ message: "Invalid or expired token" });
-    //   } else {
-    // req.decoded = decode;
-    // console.log("insert");
     if (addPantryItems.length > 0) {
       const newArr = addPantryItems.map((item) => {
         return { ...item, user_id: ownerId };
@@ -96,11 +76,9 @@ router
       knex("pantry_items")
         .insert(newArr)
         .then(() => {
-          // console.log("insert");
           return knex("pantry_items").where("user_id", ownerId);
         })
         .then((data) => {
-          // console.log(data);
           res.status(200).json(data);
         })
         .catch(() => {
@@ -112,7 +90,6 @@ router
       knex("pantry_items")
         .where("user_id", ownerId)
         .then((data) => {
-          // console.log(data);
           res.status(200).json(data);
         })
         .catch(() => {
@@ -121,8 +98,6 @@ router
           });
         });
     }
-    // }
-    // });
   });
 
 module.exports = router;
